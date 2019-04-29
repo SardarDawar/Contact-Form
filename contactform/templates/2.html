@@ -1,0 +1,21 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+ 
+<h1 style="text-align:center" >Contact Us</h1>
+
+
+  
+<form method="POST" action=".">
+    {% csrf_token %}
+    <label>Name</label>
+    <input type="text" name="Name" class="form-control" placeholder="Enter your Name">
+    <label>Email</label>
+    <input type="text" name="Email" class="form-control" placeholder="Enter your Email">
+    <label>Message</label>
+    <textarea name="Message" cols="40" rows="7" maxlength="1000" required id="id_description" class="form-control z-depth-1"
+    placeholder="Write something here..." style="resize:none;"></textarea><br>
+    <input  type="submit" value="Contact" class="btn btn-default"><br><br></vr>
+</form>
+
+{% endblock %}
